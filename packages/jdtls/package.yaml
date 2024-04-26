@@ -26,7 +26,6 @@ source:
     - target: win
       files:
         jdtls.tar.gz: https://download.eclipse.org/jdtls/milestones/{{ version | strip_prefix "v" }}/jdt-language-server-{{ version | strip_prefix "v" }}-202404031240.tar.gz
-        lombok.jar: https://projectlombok.org/downloads/lombok.jar
       config: config_win/
 
 schemas:
@@ -36,7 +35,6 @@ bin:
   jdtls: python:bin/jdtls
 
 share:
-  jdtls/lombok.jar: lombok.jar
   jdtls/plugins/: plugins/
   jdtls/plugins/org.eclipse.equinox.launcher.jar: plugins/org.eclipse.equinox.launcher_1.6.800.v20240304-1850.jar
   jdtls/config/: "{{source.download.config}}"
